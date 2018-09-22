@@ -17,18 +17,8 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length === 0) {
-    console.log("You shopping cart is empty.");
-  } else {
-    var arr = [];
-    
-    for (var i = 0; i < cart.length; i++) {
-      var price = Object.keys(cart[i]);
-      for (var j in cart[i]) {
-        arr.push(`${Object.keys(cart[i])} at $${cart[i][j]}`);
-      }
-    }
-    console.log(`In your cart, you have ${arr.join(", ")}.`);
-  }
+    console.log("Your shopping cart is empty.");
+  } else 
 }
 
 function total() {
