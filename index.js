@@ -22,7 +22,7 @@ function viewCart() {
     var oneItem = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`;
     console.log(oneItem);
   } else if (cart.length === 2) {
-    var twoItems = 
+    var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}, and ${Object.keys(cart[1])} at ${Object.values(cart[1])}.`
   }
 }
 
