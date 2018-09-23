@@ -21,10 +21,12 @@ function viewCart() {
     return "Your shopping cart is empty.";
   } else if (cart.length === 1) {
     var oneItem = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`;
-    console.log(oneItem);
+    // console.log(oneItem);
+    return oneItem;
   } else if (cart.length === 2) {
     var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}, and ${Object.keys(cart[1])} at ${Object.values(cart[1])}.`;
-    console.log(twoItems);
+    // console.log(twoItems);
+    return twoItems;
   } else {
     var cartArray = [];
     
