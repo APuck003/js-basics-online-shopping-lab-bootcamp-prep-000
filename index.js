@@ -78,8 +78,8 @@ function viewCart() {
   } else {
     var items = [];
     for (var i = 0; i < cart.length; i++) {
-      for (var item in cart[i]) {
-        items.push(item + " at $" + cart[i][item])
+      for (var item in getCart()[i]) {
+        items.push(item + " at $" + getCart()[i][item])
       }
     }
     return"In your cart, you have " + items.join(", ") + ".";
