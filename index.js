@@ -28,8 +28,9 @@ function viewCart() {
     var cartArray = [];
     
     for (var i = 0; i < cart.length - 1; i++) {
-      cartArray.push(`${Object.key})
+      cartArray.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
     }
+    var threeOrMore = 
   }
 }
 
