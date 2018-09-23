@@ -73,7 +73,7 @@ function total() {
     priceArray.push(itemPrice);
   }
   
-  for (var j = 0; j < priceArray.length; i++) {
+  for (var j = 0; j < priceArray.length; j++) {
     sumOfNums = sumOfNums += priceArray[j];
   }
   return sumOfNums;
