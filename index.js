@@ -62,7 +62,7 @@ function viewCart() {
     return twoItems;
   } else {
     var cartData = [];
-    for (var i = 0; i < cart.length-1; i++){
+    for (var i = 0; i < getCart.length-1; i++){
       cartData.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
 
     }
