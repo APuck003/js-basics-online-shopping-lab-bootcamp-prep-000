@@ -72,19 +72,7 @@ function addToCart(item) {
 //   }
 // }
 
-function viewCart() {
-  if (cart.length === 0) {
-    return "Your shopping cart is empty.";
-  } else {
-    var items = [];
-    for (var i = 0; i < cart.length; i++) {
-      for (var item in getCart()[i].itemName) {
-        items.push(item + " at $" + getCart()[i].itemPrice)
-      }
-    }
-    return"In your cart, you have " + items.join(", ") + ".";
-  }
-}
+
 
 
 function total() {
