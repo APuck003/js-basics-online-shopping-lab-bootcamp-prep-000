@@ -58,7 +58,7 @@ function viewCart() {
     var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
     return oneItem;
   } else if (cart.length === 2){
-    var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`;
+    var twoItems = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice} and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`;
     return twoItems;
   } else {
     var cartData = [];
