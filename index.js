@@ -67,7 +67,7 @@ function viewCart() {
 
     }
     // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
-    var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
+    var threePlusItems = `In your cart, you have ${getCart()[i].itemName}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
     return threePlusItems;
   }
 }
