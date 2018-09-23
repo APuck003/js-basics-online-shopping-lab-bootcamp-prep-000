@@ -97,7 +97,7 @@ function placeOrder(cardNumber) {
   } else {
     var orderTotal = total();
     cart.splice(0, cart.length);
-    
+    return `Your total cost is $${orderTotal}, which will be charged to the card ${cardNumber}.`;
   }
 }
 
