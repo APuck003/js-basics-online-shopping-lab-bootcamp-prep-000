@@ -63,7 +63,7 @@ function viewCart() {
   } else {
     var cartData = [];
     for (var i = 0; i < getCart.length-1; i++){
-      cartData.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
+      cartData.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`);
 
     }
     // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
