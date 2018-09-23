@@ -55,7 +55,7 @@ function viewCart() {
   if (cart.length === 0){
     return 'Your shopping cart is empty.';
   } else if (cart.length === 1){
-    var oneItem = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`;
+    var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
     return oneItem;
   } else if (cart.length === 2){
     var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`;
