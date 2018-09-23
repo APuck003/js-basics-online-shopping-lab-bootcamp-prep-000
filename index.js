@@ -46,8 +46,8 @@ function viewCart() {
       cartArray.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
     }
     var threeOrMore = `In your cart, you have ${cartArray.join(', ')}, and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`;
+    console.log(threeOrMore);
   }
-  console.log(threeOrMore);
 }
 
 function total() {
