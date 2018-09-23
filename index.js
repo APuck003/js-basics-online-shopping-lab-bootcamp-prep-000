@@ -65,8 +65,20 @@ function viewCart() {
 
 
 function total() {
+  var priceArray = [];
+  var sumOfNums = 0;
   
+  for (let i = 0; i < cart.length; i++) {
+    let itemPrice = getCart()[i].itemPrice;
+    priceArray.push(itemPrice);
+  }
+  
+  for (var j = 0; j < priceArray.length; i++) {
+    sumOfNums = sumOfNums += priceArray[j];
+  }
+  return sumOfNums;
 }
+
 
 function removeFromCart(item) {
   // write your code here
