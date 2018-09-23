@@ -53,6 +53,8 @@ function addToCart(item) {
 
 
 
+
+
 function total() {
   // write your code here
 }
