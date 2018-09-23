@@ -22,7 +22,14 @@ function viewCart() {
     var oneItem = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`;
     console.log(oneItem);
   } else if (cart.length === 2) {
-    var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}, and ${Object.keys(cart[1])} at ${Object.values(cart[1])}.`
+    var twoItems = `In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}, and ${Object.keys(cart[1])} at ${Object.values(cart[1])}.`;
+    console.log(twoItems);
+  } else {
+    var cartArray = [];
+    
+    for (var i = 0; i < cart.length - 1; i++) {
+      cartArray.push(`${Object.key})
+    }
   }
 }
 
