@@ -81,8 +81,8 @@ function viewCart() {
    const itemsAndPrices = [];
    for (let i = 0; i < l; i++) {
     let itemAndPrice = cart[i];
-    let item = Object.keys(itemAndPrice)[0];
-    let price = itemAndPrice[item];
+    let item = getCart()[0].itemName;
+    let price = getCart()[0].itemPrice;
      itemsAndPrices.push(`${item} at \$${price}`);
   }
    return `In your cart, you have ${itemsAndPrices.join(', ')}.`;
