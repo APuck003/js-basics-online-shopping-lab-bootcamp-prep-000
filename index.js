@@ -50,27 +50,44 @@ function addToCart(item) {
 //   }
 // }
 
-function viewCart() {
-  // write your code here
-  if (cart.length === 0){
-    return 'Your shopping cart is empty.';
-  } else if (cart.length === 1){
-    var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
-    return oneItem;
-  } else if (cart.length === 2){
-    var twoItems = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}, and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`;
-    return twoItems;
-  } else {
-    var cartData = [];
-    for (var i = 0; i < cart.length; i++){
-      cartData.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`);
+// function viewCart() {
+//   // write your code here
+//   if (cart.length === 0){
+//     return 'Your shopping cart is empty.';
+//   } else if (cart.length === 1){
+//     var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
+//     return oneItem;
+//   } else if (cart.length === 2){
+//     var twoItems = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}, and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`;
+//     return twoItems;
+//   } else {
+//     var cartData = [];
+//     for (var i = 0; i < cart.length; i++){
+//       cartData.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`);
 
-    }
-    // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
-    var threePlusItems = `In your cart, you have ${getCart()[i].itemName}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
-    return threePlusItems;
+//     }
+//     // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
+//     var threePlusItems = `In your cart, you have ${getCart()[i].itemName}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
+//     return threePlusItems;
+//   }
+// }
+
+
+function viewCart() {
+  const l = cart.length;
+   if (!l) {
+    return console.log("Your shopping cart is empty.");
   }
+   const itemsAndPrices = [];
+   for (let i = 0; i < l; i++) {
+    let itemAndPrice = cart[i];
+    let item = Object.keys(itemAndPrice)[0];
+    let price = itemAndPrice[item];
+     itemsAndPrices.push(`${item} at \$${price}`);
+  }
+   console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
 }
+
 
 
 
