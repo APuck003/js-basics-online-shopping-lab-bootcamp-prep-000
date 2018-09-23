@@ -9,12 +9,12 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
-  var price = Math.floor(Math.random() * 100) + 1;
-  // cart.push({"itemName": item, "itemPrice": price});
-  cart.push({[item]: price});
-  return `${item} has been added to your cart.`;
-}
+// function addToCart(item) {
+//   var price = Math.floor(Math.random() * 100) + 1;
+//   // cart.push({"itemName": item, "itemPrice": price});
+//   cart.push({[item]: price});
+//   return `${item} has been added to your cart.`;
+// }
 
 function viewCart() {
   if (cart.length === 0) {
