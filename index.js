@@ -32,6 +32,7 @@ function viewCart() {
     }
     var threeOrMore = `In your cart, you have ${cartArray.join(', ')}, and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`;
   }
+  console.log(threeOrMore);
 }
 
 function total() {
