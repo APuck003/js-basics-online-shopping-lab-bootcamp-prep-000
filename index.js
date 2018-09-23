@@ -76,7 +76,7 @@ function addToCart(item) {
 function viewCart() {
   const l = cart.length;
    if (!l) {
-    return console.log("Your shopping cart is empty.");
+    return "Your shopping cart is empty.";
   }
    const itemsAndPrices = [];
    for (let i = 0; i < l; i++) {
@@ -85,7 +85,7 @@ function viewCart() {
     let price = itemAndPrice[item];
      itemsAndPrices.push(`${item} at \$${price}`);
   }
-   console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
+   return `In your cart, you have ${itemsAndPrices.join(', ')}.`;
 }
 
 
