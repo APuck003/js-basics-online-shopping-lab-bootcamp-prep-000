@@ -85,7 +85,7 @@ function viewCart() {
     let price = getCart()[0].itemPrice;
      itemsAndPrices.push(`${item} at \$${price}`);
   }
-   return `In your cart, you have ${itemsAndPrices.join(', and')}.`;
+   return `In your cart, you have ${itemsAndPrices.join(', and ')}.`;
 }
 
 
