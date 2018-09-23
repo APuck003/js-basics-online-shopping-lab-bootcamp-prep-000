@@ -75,8 +75,8 @@ function addToCart(item) {
 function viewCart() {
   var cartArray = [];
   for (let i = 0; i < cart.length; i++) {
-    var itemName  = Object.keys(cart[i])[0];
-    var itemPrice = cart[i][itemName];
+    var itemName  = getCart()[i].itemName;
+    var itemPrice = getCart()[i].itemPrice;
     cartArray.push(`${itemName} at $${itemPrice}`);
   }
   
