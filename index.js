@@ -50,29 +50,41 @@ function addToCart(item) {
 //   }
 // }
 
-function viewCart() {
-  // write your code here
-  if (cart.length === 0){
-    return 'Your shopping cart is empty.';
-  } else if (cart.length === 1){
-    var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
-    return oneItem;
-  } else if (cart.length === 2){
-    var twoItems = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}, and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`;
-    return twoItems;
-  } else {
-    var cartData = [];
-    for (var i = 0; i < cart.length; i++){
-      cartData.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`);
+// function viewCart() {
+//   // write your code here
+//   if (cart.length === 0){
+//     return 'Your shopping cart is empty.';
+//   } else if (cart.length === 1){
+//     var oneItem = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`;
+//     return oneItem;
+//   } else if (cart.length === 2){
+//     var twoItems = `In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}, and ${getCart()[1].itemName} at $${getCart()[1].itemPrice}.`;
+//     return twoItems;
+//   } else {
+//     var cartData = [];
+//     for (var i = 0; i < cart.length; i++){
+//       cartData.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`);
 
+//     }
+//     // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
+//     var threePlusItems = `In your cart, you have ${getCart()[i].itemName}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
+//     return threePlusItems;
+//   }
+// }
+
+function viewCart() {
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else {
+    var items = [];
+    for (var i = 0; i < cart.length; i++) {
+      for (var item in cart[i]) {
+        items.push(item + " at $" + cart[i][item])
+      }
     }
-    // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
-    var threePlusItems = `In your cart, you have ${getCart()[i].itemName}, and ${getCart()[i].itemName} at $${getCart()[i].itemPrice}.`;
-    return threePlusItems;
+    return"In your cart, you have " + items.join(", ") + ".";
   }
 }
-
-
 
 
 function total() {
