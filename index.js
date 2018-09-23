@@ -30,7 +30,7 @@ function viewCart() {
     for (var i = 0; i < cart.length - 1; i++) {
       cartArray.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
     }
-    var threeOrMore = 
+    var threeOrMore = `In your cart, you have ${cartArray.join(', ')}, and ${Object.keys(cart[cart.length - 1])} at $${Object.values(cart[cart.length - 1])}.`;
   }
 }
 
