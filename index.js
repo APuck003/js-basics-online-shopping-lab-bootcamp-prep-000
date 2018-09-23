@@ -72,7 +72,22 @@ function addToCart(item) {
 //   }
 // }
 
-
+function viewCart() {
+  // write your code here	  var cartArray = [];
+  for (let i = 0; i < cart.length; i++) {
+    var itemName  = Object.keys(cart[i])[0];
+    var itemPrice = cart[i][itemName];
+    cartArray.push(`${itemName} at $${itemPrice}`);
+  }
+  
+  if (cart.length === 0){
+    console.log(`Your shopping cart is empty.`);
+  } else if (cart.length <= 2){
+    console.log(`In your cart, you have ${cartArray.join(' and ')}.`)
+  } else if (cart.length >= 3){
+    console.log(`In your cart, you have ${cartArray.slice(0, cartArray.length - 1).join(', ')}, and ${cartArray.slice(-1)}.`)
+  }
+  }
 
 
 function total() {
