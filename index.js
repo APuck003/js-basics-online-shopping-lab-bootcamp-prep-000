@@ -66,7 +66,8 @@ function viewCart() {
       cartData.push(`${Object.keys(cart[i])} at $${Object.values(cart[i])}`);
 
     }
-    var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
+    // var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`;
+    var threePlusItems = `In your cart, you have ${cartData.join(', ')}, and ${getCart()[cart.length - 1].itemName)} at $${getCart()[cart.length - 1].itemPrice}.`;
     return threePlusItems;
   }
 }
